@@ -6,13 +6,24 @@ public class SimpleBot {
     final static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
 
+        greet();
+        askName();
+        askAge();
+        count();
+        test();
+        end();
+    }
+    static void greet() {
         System.out.println("Hello! My name is Aid.");
         System.out.println("I was created in 2020");
+    }
 
+    static void askName() {
         System.out.println("Please, remind me your name.");
         String name = scanner.next();
         System.out.println("What a great name you have, " + name + '!');
-
+    }
+    static void askAge() {
         System.out.println("Let me guess your age.");
         System.out.println("Enter remainders of dividing your age by 3, 5 and 7.");
 
@@ -23,16 +34,14 @@ public class SimpleBot {
         int age = (remainder3 * 70 + remainder5 * 21 + remainder7 * 15) % 105;
 
         System.out.println("Your age is " + age + "; that's a good time to start programming!");
-
+    }
+    static void count() {
         System.out.println("Now I will prove to you that I can count to any number you want.");
 
         int num = scanner.nextInt();
         for (int i = 0;i <= num; i++) {
             System.out.println(i + "!");
         }
-
-        test();
-        end();
     }
 
     static void test() {
