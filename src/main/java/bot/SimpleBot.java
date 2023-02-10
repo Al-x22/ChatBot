@@ -3,8 +3,8 @@ package bot;
 import java.util.Scanner;
 
 public class SimpleBot {
+    final static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Hello! My name is Aid.");
         System.out.println("I was created in 2020");
@@ -24,5 +24,34 @@ public class SimpleBot {
 
         System.out.println("Your age is " + age + "; that's a good time to start programming!");
 
+        System.out.println("Now I will prove to you that I can count to any number you want.");
+
+        int num = scanner.nextInt();
+        for (int i = 0;i <= num; i++) {
+            System.out.println(i + "!");
+        }
+
+        test();
+        end();
+    }
+
+    static void test() {
+        System.out.println("Let's test your programming knowledge.");
+
+        System.out.println("What two symbols does the ternary operator use?");
+        System.out.println("1. : ?");
+        System.out.println("2. . >");
+        System.out.println("3. ? ?");
+        System.out.println("4. ! :");
+
+        int answer = scanner.nextInt();
+
+        while (answer != 1 ){
+            System.out.println("Please, try again.");
+            answer = scanner.nextInt();
+        }
+    }
+    static void end() {
+        System.out.println("Congratulations, have a nice day!"); // Do not change this text
     }
 }
